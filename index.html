@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="Assets/styles/style.css">
     <title>Deified Design | Texas UX/UI Design, Web Development & SEO Agency</title>
 
     <meta name="description" content="Deified Design is a Texas-based agency specializing in UX/UI design, web development, SEO, and digital growth solutions.">
@@ -49,17 +49,17 @@
                   </svg>
               </a>
           </li>
-          <li><a href="#" class="mobilelinks">Services</a></li>
-          <li><a href="#" class="mobilelinks">Work</a></li>
-          <li><a href="#" class="mobilelinks">Contact</a></li>
-          <li><a href="#" class="mobilelinks">About</a></li>
+          <!-- <li><a href="#" class="mobilelinks">Services</a></li> -->
+          <!-- <li><a href="#" class="mobilelinks">Work</a></li> -->
+          <li><a href="contact.html" class="mobilelinks">Contact</a></li>
+          <!-- <li><a href="#" class="mobilelinks">About</a></li> -->
       </ul>
       <ul class="desktopnav">
           <!-- <li><a href="#" class="desktoplinks">Services</a></li> -->
-          <li><a href="#" class="desktoplinks">Work</a></li>
-          <li><a href="#" class="desktoplinks">Contact</a></li>
-          <li><a href="#" class="desktoplinks">About</a></li>
-          <button class="nav-button">Get Started</button>
+          <!-- <li><a href="#" class="desktoplinks">Work</a></li> -->
+          <li><a href="contact.html" class="desktoplinks">Contact</a></li>
+          <!-- <li><a href="#" class="desktoplinks">About</a></li> -->
+          <a href="contact.html" class="nav-button">Get Started</a>
       </ul>
       <li onclick="showSidebar()" class="menubtn">
           <a href="#" class="desktoplinks" id="menuButton-on">
@@ -76,10 +76,15 @@
       <p>At Deified Design Agency we create intuitive, beautiful designs that captivate users and elevate brands. Let our expertise transform your vision into reality.</p>
       <!-- <img src="/Assets/images/Deified Logo 1.png" alt="Deified Logo" class="main-logo"> -->
       <div class="btn-container">
-      <button class="btn-1">Schedule Call <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-      </svg></button>
-      <button class="btn-2">View Services</button>
+        <a href="contact.html" class="btn-1">
+          Schedule Call
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </a>
+        
+        <a href="contact.html" class="btn-2">View Services</a>
+        
       </div>
     </aside>
     <aside class="img-container">
@@ -88,10 +93,8 @@
   </section>
 
   <section class="second-section">
-    <div class="background-blur">
     <h1>Creative Solutions for your business</h1>
     <p>At Deified Design Agency we specialize in creating stunning, user-centric designs that elevate your brand. Whether you need a complete overhaul or a fresh start, our team is dedicated to bringing your vision to life with innovative solutions.</p>
-    </div>
   </section>
 
   <section class="business">
@@ -106,11 +109,14 @@
   <section class="expertise">
     <aside>
       <h2>Expertise in UX/UI Design That Sets Us Apart</h2>
-      <button class="btn-1">Schedule Call <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-      </svg></button>
+      <a href="contact.html" class="btn-1">
+        Schedule Call
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
     </aside>
-    <aside><p>Our team consists of professional UI/UX designers with deep expertise in SEO and social media marketing. We blend aesthetics with functionality, creating stunning designs that perform exceptionally well across all digital platforms. Trust us to elevate your brand with captivating, high-converting user experiences.</p></aside>
+    <aside><p class="mobile-p">Our team consists of professional UI/UX designers with deep expertise in SEO and social media marketing. We blend aesthetics with functionality, creating stunning designs that perform exceptionally well across all digital platforms. Trust us to elevate your brand with captivating, high-converting user experiences.</p><p class="desktop-p">Our team consists of professional UI/UX designers with deep expertise in SEO and social media marketing. We blend aesthetics with functionality, creating stunning designs that perform exceptionally well across all digital platforms. Trust us to elevate your brand with captivating, high-converting user experiences.</p></aside>
   </section>
 
   <section id="services">
@@ -128,8 +134,10 @@
     </div>
     <div id="tab-content">
       <div id="uiux" class="tab-content active">
+        <div class="uiux-contain">
         <h3>UI/UX Design</h3>
         <p>We specialize in crafting intuitive and visually stunning user interfaces. Our designs prioritize user experience, ensuring that every interaction is seamless and engaging, helping you connect with your audience more effectively.</p>
+      </div>
         <div class="grid">
           <div class="grid-item one"></div>
           <div class="grid-item two"></div>
@@ -139,8 +147,10 @@
       </div>
       <!-- Add other tab content sections here -->
       <div id="seo" class="tab-content">
+        <div class="uiux-contain">
         <h3>SEO</h3>
         <p> Our SEO services are designed to boost your website’s search engine rankings. We employ effective strategies to enhance your site's visibility, drive organic traffic, and improve your online presence.</p>
+      </div>
         <div class="grid">
           <div class="grid-item five"></div>
           <div class="grid-item six"></div>
@@ -149,8 +159,10 @@
         </div>
       </div>
       <div id="development" class="tab-content">
+        <div class="uiux-contain">
         <h3>Development</h3>
         <p>Full Front-end development, our team delivers high-quality, scalable web solutions. We ensure that your website functions seamlessly, with a focus on performance, security, and reliability.</p>
+      </div>
         <div class="grid">
           <div class="grid-item nine"></div>
           <div class="grid-item ten"></div>
@@ -159,8 +171,10 @@
         </div>
       </div>
       <div id="google-listing" class="tab-content">
+        <div class="uiux-contain">
         <h3>Google Listing</h3>
         <p>Enhance your business's local visibility with optimized Google Listings. We help you create and manage your Google My Business profile to attract local customers and improve search results.</p>
+      </div>
         <div class="grid">
           <div class="grid-item thirteen"></div>
           <div class="grid-item fourteen"></div>
@@ -169,8 +183,10 @@
         </div>
       </div>
       <div id="social-media" class="tab-content">
+        <div class="uiux-contain">
         <h3>Social Media Marketing</h3>
         <p>Our social media marketing strategies are tailored to increase your brand’s reach and engagement across various platforms. We create compelling content and targeted campaigns to connect with your audience effectively.</p>
+      </div>
         <div class="grid">
           <div class="grid-item eighteen"></div>
           <div class="grid-item nineteen"></div>
@@ -179,8 +195,10 @@
         </div>
       </div>
       <div id="logo-design" class="tab-content">
+        <div class="uiux-contain">
         <h3>Logo Design</h3>
         <p>We design unique and impactful logos that represent your brand’s essence. Our logo design services focus on creating visually appealing and memorable brand identities that resonate with your audience.</p>
+      </div>
         <div class="grid">
           <div class="grid-item twentythree"></div>
           <div class="grid-item twentyfour"></div>
@@ -203,13 +221,13 @@
 <footer>
 
   <aside>
-      <ul>
-          <li><h4>Sitemap</h4></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">About</a></li>
-      </ul>
+    <ul>
+      <li><h4>Sitemap</h4></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
   </aside>
 
   <aside>
@@ -222,19 +240,21 @@
   </aside>
 
   <aside>
-      <ul>
-          <li><h4>Contact</h4></li>
-          <li><a href="#">deifieddesignagency@gmail.com</a></li>
-          <li><a href="#">(210) 550-0621</a></li>
-      </ul>
-  </aside>
+    <ul>
+        <li><h4>Contact</h4></li>
+        <li><a href="mailto:info@deifieddesign.com">info@deifieddesign.com</a></li>
+        <li><a href="tel:+12105500621">(210) 550-0621</a></li>
+    </ul>
+</aside>
 
-  <aside class="container-two">
-      <div class="copycontainer">
-          <div class="copyright"><p>C</p></div>
-          <p>2024</p>
-      </div>
-  </aside>
+<aside class="container-two">
+    <div class="copycontainer">
+        <div>
+            <p>&copy;</p> <!-- Use the correct symbol for copyright -->
+        </div>
+        <p>2024</p>
+    </div>    
+</aside>
 
 </footer>
 

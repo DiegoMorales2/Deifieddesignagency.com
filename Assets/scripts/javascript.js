@@ -52,3 +52,37 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".content").style.display = "block";
   }, 2000);
 });
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var form = this;
+    var formResponse = document.getElementById('formResponse');
+
+    // Send the form data using fetch API
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            // Success feedback
+            form.style.border = '2px solid green';
+            formResponse.innerHTML = '<p style="color: green; border: 2px solid green; background-color: white; padding: 1rem; text-align: center;">Message Sent</p>';
+            formResponse.style.display = 'block';
+
+            // Reset the form
+            form.reset();
+        } else {
+            formResponse.innerHTML = '<p style="color: red;">Something went wrong. Please try again later.</p>';
+            formResponse.style.display = 'block';
+        }
+    }).catch(function(error) {
+        formResponse.innerHTML = '<p style="color: red;">Something went wrong. Please try again later.</p>';
+        formResponse.style.display = 'block';
+    });
+});
+

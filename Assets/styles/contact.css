@@ -1,0 +1,145 @@
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 25px;
+    border: solid 1px #b8b8b8;
+    background: #ececec;
+    backdrop-filter: blur(50px);
+}
+
+.contact-image {
+    display: none;
+}
+
+.sidebar {
+    z-index: 999;
+}
+
+.contact-form span {
+    line-height: 0;
+    font-size: .7rem;
+}
+
+.form-styles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input {
+    height: 24px;
+    border-radius: .5rem;
+    border: none;
+    background-color: #d1d0d0;
+    font-family: Karla, sans-serif;
+    padding: .5rem 1rem .5rem 1rem;
+}
+
+
+textarea {
+    border-radius: .5rem;
+    border: none;
+    background-color: #d1d0d0;
+    font-family: Karla, sans-serif;
+    padding: 1rem;
+}
+
+label {
+    color: #0D0D0D;
+    font-family: Karla;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.contact-form h1 {
+    font-size: 1rem;
+}
+
+.contact-form h2 {
+    margin-top: 1rem;
+}
+
+.contact-form p {
+    margin-bottom: 1rem;
+}
+
+.contact-form button {
+    background: #161616;
+    color: white;
+    border-radius: .5rem;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:active {
+    background: linear-gradient(270deg, #7E1CC9 0%, #962ECB 21.5%, #C751D0 58.07%, #CC54D0 68.74%, #EB6BD3 100%);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+    .contact-image{
+        background: url(/Assets/images/deifieddesign_beautifully_designed_website_with_ancient_archite_fd2f70f7-e74a-4de2-a7f4-353c7a786fa2.png);
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        padding: 1rem;
+        border-radius: 25px;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .image-controls {
+        display: flex;
+        gap: .5rem;
+        width: 20%;
+        height: 45px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .image-controls button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: #161616;
+        border: none;
+        padding: 0 1rem 0 1rem;
+        width: 60%;
+        height: fit-content%;
+        border-radius: .5rem;
+    }
+
+    .image-controls button:hover {
+        background: linear-gradient(270deg, #7E1CC9 0%, #962ECB 21.5%, #C751D0 58.07%, #CC54D0 68.74%, #EB6BD3 100%);
+        cursor: pointer;
+    }
+
+    .image-controls button svg {
+        width: 2rem;  /* Set the desired width */
+        height: 2rem; /* Set the desired height */
+    }
+}
