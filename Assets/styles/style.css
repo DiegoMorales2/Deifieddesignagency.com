@@ -313,6 +313,9 @@ body {
   
   .first-section {
     display: flex;
+    z-index: -99;
+    background-image: url(/Assets/images/deifieddesign_beautifully_designed_website_with_ancient_archite_fd2f70f7-e74a-4de2-a7f4-353c7a786fa2.png);
+    background-size: cover;
   }
   
   .img-container {
@@ -374,21 +377,26 @@ body {
   }
   
   .hero-container h1{
-    color: #000;
     font-family: Karla;
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
     letter-spacing: -1px;
+    color: white;
   }
   
   .hero-container p{
-    color: #000;
     font-family: Karla;
     font-size: .8rem;
     font-style: normal;
     font-weight: 400;
     width: 80%;
+    color: white;
+  }
+
+  .btn-2 {
+    border: 1px solid white;
+    color: white;
   }
   
   .second-section{
@@ -660,7 +668,6 @@ body {
   }
 
   .hero-container {
-    background-image: url(/Assets/images/deifieddesign_beautifully_designed_website_with_ancient_archite_fd2f70f7-e74a-4de2-a7f4-353c7a786fa2.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right center; /* Position the image to the right */
@@ -992,7 +999,9 @@ body {
     padding: 0 2rem 0 2rem;
 }
 
-
+  .hero-container h1 {
+    color: white;
+  }
 
 }
 
