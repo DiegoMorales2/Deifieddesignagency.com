@@ -20,6 +20,11 @@ body {
   overflow-x: hidden;
 }
 
+.headernav a {
+  text-decoration: none;
+}
+
+
 
 .loader {
     height: 50vh;
@@ -279,6 +284,7 @@ body {
     position: absolute;
     height: 100vh;
     top: 0;
+    z-index: 999;
     right: 0;
   }
   
@@ -313,7 +319,6 @@ body {
   
   .first-section {
     display: flex;
-    z-index: -99;
     background-image: url(/Assets/images/deifieddesign_beautifully_designed_website_with_ancient_archite_fd2f70f7-e74a-4de2-a7f4-353c7a786fa2.png);
     background-size: cover;
   }
