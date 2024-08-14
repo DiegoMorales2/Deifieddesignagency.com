@@ -18,7 +18,12 @@
 
 body {
   overflow-x: hidden;
+  background: #000;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: brightness(1.2);
 }
+
 
 .headernav a {
   text-decoration: none;
@@ -112,14 +117,26 @@ body {
     list-style-type: none;
   }
   
-  footer a {
+  footer a, footer li {
     text-decoration: none;
     color: #9D9D9D;
   } 
+
+  footer a {
+    font-weight: 800;
+  }
+
+  .banner-content h2 {
+    margin-left: 8rem;
+  }
   
   footer h4 {
     font-size: 1.5rem;
     color: white;
+  }
+
+  footer a:hover {
+    color: #cecece;
   }
   
   .resume {
@@ -181,7 +198,7 @@ body {
   
   body {
     font-family: "Karla", sans-serif;
-    background: #F5F5F5;
+    /* background: #F5F5F5; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -210,9 +227,12 @@ body {
   /* Mobile-first styles */
   .headernav {
     display: flex;
-    border-bottom: 1px solid #BCBCBC;
+    border-bottom: 1px rgba(64, 64, 64, 0.41);
+    background: rgb(49, 49, 49);
+    backdrop-filter: blur(17px);
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
     padding: 0 1rem;
     position: relative; /* Ensures positioning for the menu button */
   }
@@ -222,19 +242,57 @@ body {
     font-family: Karla, sans-serif;
     font-size: 32px; /* Adjusted for mobile */
     font-weight: 700;
-    color: #000;
+    color: rgb(49, 49, 49);
+    background-color: transparent; /* Set this to black or remove for no background */
     line-height: 48px; /* 150% */
     letter-spacing: -1.6px;
-  }
+    text-shadow:
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white;
+}
   
-  .headernav, h1 span {
+  .headernav span {
     font-family: Karla, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
-    color: #000;
+    color: #e7e680;
     line-height: 48px;
     letter-spacing: -0.8px;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #ffffff,
+      0 0 42px rgb(255, 238, 0),
+      0 0 82px rgb(255, 238, 0),
+      0 0 92px rgb(208, 255, 0),
+      0 0 102px rgb(197, 224, 96),
+      0 0 151px rgb(251, 255, 0);
+      /* animation: flicker 1.5s infinite alternate; */
   }
+
+  @keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #ffffff,
+      0 0 42px rgb(255, 238, 0),
+      0 0 82px rgb(255, 238, 0),
+      0 0 92px rgb(208, 255, 0),
+      0 0 102px rgb(197, 224, 96),
+      0 0 151px rgb(251, 255, 0);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
   
   .nav-button {
     display: none;
@@ -242,8 +300,8 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    border: 1px solid #0A0A0A;
-    background: #282828;
+    border: none;
+    background: #000000;
     color: #F5F5F5;
     font-family: Karla;
     font-size: 1.4rem;
@@ -257,7 +315,7 @@ body {
     }
 
     .nav-button:hover {
-      background: linear-gradient(270deg, #7E1CC9 0%, #962ECB 21.5%, #C751D0 58.07%, #CC54D0 68.74%, #EB6BD3 100%);
+      background: #b44dce;
       cursor: pointer;
     }
   
@@ -270,6 +328,21 @@ body {
       color: black;
     }
 
+    .btn-2:hover {
+      background-color: #ffffff;
+      border: solid 1px #ffffff;
+      color: #000;
+    }
+
+    .btn-1:hover{
+      background-color: #b42ec0;
+    }
+
+    .expertise .btn-1:hover {
+      background-color: #e6e6e6;
+    }
+
+
 
   .sidebar {
     list-style: none;
@@ -278,8 +351,8 @@ body {
     display: none; /* Hidden by default */
     flex-direction: column;
     width: 75%;
-    background: rgba(0, 0, 0, 0.53);
-    backdrop-filter: blur(32.849998474121094px);
+    background: rgba(0, 0, 0, 0.884);
+    backdrop-filter: blur(32px);
     padding: 1rem;
     position: absolute;
     height: 100vh;
@@ -287,6 +360,7 @@ body {
     z-index: 999;
     right: 0;
   }
+
   
   .sidebar a{
     color: white;
@@ -300,7 +374,8 @@ body {
   
   .headernav .desktoplinks {
     text-decoration: none;
-    color: #000;
+    /* color: #000; */
+    color: #FFF;
     font-family: Karla, sans-serif;
     font-size: 1.5rem; /* Adjusted for mobile */
     font-weight: 400;
@@ -319,8 +394,9 @@ body {
   
   .first-section {
     display: flex;
-    background-image: url(/Assets/images/deifieddesign_beautifully_designed_website_with_ancient_archite_fd2f70f7-e74a-4de2-a7f4-353c7a786fa2.png);
+    background-image: url(/Assets/images/deifieddesign_a_retro_70s_vibe_background_image_that_is_not_t_d99b182d-8fd0-4063-ace5-e2c89a593305_1.png);
     background-size: cover;
+    background-position: center;
   }
   
   .img-container {
@@ -333,7 +409,7 @@ body {
     width: 100%;
     justify-content: center;
     align-items: flex-start;
-    height: 35vh;
+    height: 65vh;
     padding: 2rem;
   }
 
@@ -348,7 +424,7 @@ body {
   
   .btn-1{
     border-radius: 65px;
-    background: #000;
+    background: #cc47d8;
     color: white;
     display: flex;
     flex-wrap: nowrap;
@@ -392,7 +468,7 @@ body {
   
   .hero-container p{
     font-family: Karla;
-    font-size: .8rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     width: 80%;
@@ -404,14 +480,16 @@ body {
     color: white;
   }
   
-  .second-section{
+  .second-section {
     display: flex;
     padding: 2rem;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    background-color: #e4e4e4;
-  }
+    background: url(/Assets/images/Gradient.png);
+    background-size: cover;
+    filter: brightness(1.6); /* Increase brightness */
+}
   
   .second-section h1{
     width: 100%;
@@ -422,24 +500,23 @@ body {
   
   .business {
     display: flex;
-    flex-direction: column;
+    width: 100%;
     padding: 2rem;
     justify-content: center;
     align-items: center;
+    background-color: #222222;
   }
   
   .business-img{
     width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
     background: url("/Assets/images/business-img.png");
     background-size: cover;
     background-position: center;
-    margin-bottom: 2rem;
     border-radius: 1rem;
   }
+
+
   
   
   .business-containers {
@@ -468,7 +545,7 @@ body {
   font-size: 2rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 31px; /* 96.875% */
+  line-height: 31px; 
   letter-spacing: -1px;
   }
   
@@ -571,7 +648,7 @@ body {
   .tab-button:hover,
   .tab-button.active {
     color: #fff;
-    border-bottom: 2px solid #E7FF8F  ;
+    border-bottom: 2px solid #f05cbe  ;
   }
   
   .tabs-container::before,
@@ -636,31 +713,57 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(90deg, #A8CD1B 0%, #E7FF8F 100%);
+    height: 100px;
+    display: flex;
+    background: linear-gradient(90deg, #820c92 0%, #e778c2 100%);
     overflow: hidden;
     z-index: 10; /* Ensures the banner is above other content */
   }
   
+  /* .banner-content {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+  }
+
+  .banner-content img {
+    transform: scale(.3);
+  } */
   .banner-content {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    animation: scroll-left 10s linear infinite;
-  }
+    gap: 0;
+    animation: scroll-left 100s linear infinite;
+}
+
+.banner-content img {
+    margin: 0 -20px; /* Adds 20px space on both sides of the gif */
+    transform: scale(.2);
+    display: inline-block; /* Ensures the image only takes the space it needs */
+}
+
   
   .banner-content h2, .banner-content svg, .banner-content span {
-    margin-right: 20px;
     flex: none; /* Prevents flex items from stretching */
   }
   
   .banner-content h2 {
-    font-size: 3rem;
+    font-size: 7rem;
+    position: relative;
+    right: -200px;
     width: fit-content;
+    margin: 0;
   }
   
   .banner-content span {
-    font-size: 3rem;
+    font-size: 7rem;
+    position: relative;
+    left: -200px;
   }
+
+  
   
   .banner-content svg {
     width: 3rem;
@@ -668,7 +771,7 @@ body {
   }
   
   @keyframes scroll-left {
-    0% { transform: translateX(100%); }
+    0% { transform: translateX(0%); }
     100% { transform: translateX(-100%); }
   }
 
@@ -808,7 +911,40 @@ body {
 
   @media only screen and (min-width: 1200px) {
 
+    .headernav {
+      display: flex;
+      border-bottom: 1px rgba(64, 64, 64, 0.41);
+      background: rgba(0, 0, 0, 0.144);
+      backdrop-filter: blur(17px);
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      position: relative; /* Ensures positioning for the menu button */
+    }
 
+    .img-container {
+      display: flex;
+      z-index: -999;
+      transform: scale(.23);
+      position: absolute;
+      top: 4rem;
+      right: -6rem
+    }
+
+    .first-section {
+      display: flex;
+      background:transparent;
+      background-size: cover;
+      background-position: center;
+    }
+
+    body {
+      overflow-x: hidden;
+      background: url(/Assets/images/background-retro-flipped.png);
+      background-size: contain;
+      background-position: top;
+      backdrop-filter: brightness(1.2);
+    }
 
     .headernav .desktopnav {
         display: flex;
@@ -839,6 +975,10 @@ body {
         font-weight: 400;
     }
 
+    .hero-container {
+      max-width: 600px;
+    }
+
     .second-section p {
         width: 70%;
         margin-top: .5rem;
@@ -846,7 +986,7 @@ body {
 
     .business {
         flex-direction: row;
-        width: 98%;
+        width: 96.8%;
     }
 
     .business-img {
