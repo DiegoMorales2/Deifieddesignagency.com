@@ -86,3 +86,11 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     });
 });
 
+window.addEventListener('load', function () {
+  // Show the loading screen for 5 seconds
+  setTimeout(function () {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('content').style.display = 'flex';
+  }, 5000); // 5000 milliseconds = 5 seconds
+});
+
