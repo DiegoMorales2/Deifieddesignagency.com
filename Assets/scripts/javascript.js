@@ -93,4 +93,3 @@ window.addEventListener('load', function () {
       document.getElementById('content').style.display = 'flex';
   }, 5000); // 5000 milliseconds = 5 seconds
 });
-

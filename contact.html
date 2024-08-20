@@ -61,39 +61,82 @@
   
     <section class="contact-section">
       <div class="container">
-        <div class="contact-form">
-            <h1>DEIFIED <span>design agency</span></h1>
-          <h2>We’d love to help</h2>
-          <p>Tell us a bit about your project or what you're looking to achieve. Whether you need a fresh website design, UI/UX overhaul, or marketing strategy, we’re here to help. Just give us a brief summary, and we'll be in touch to explore how we can bring your vision to life.</p>
-          <form action="sendmail.php" method="POST" class="form-styles">
-            <div class="input-group">
-              <label for="first-name">First name</label>
-              <input type="text" id="first-name" name="first-name" required>
-            </div>
-            <div class="input-group">
-              <label for="last-name">Last name</label>
-              <input type="text" id="last-name" name="last-name" required>
-            </div>
-            <div class="input-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="input-group">
-              <label for="phone-number">Phone number</label>
-              <input type="tel" id="phone-number" name="phone-number" required>
-            </div>
-            <div class="input-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-        <div class="contact-image">
-            <img src="Assets/images/Deified-Logo-1.gif" alt="Logo">
-        </div>
+          <div class="contact-form">
+              <h1>DEIFIED <span>design agency</span></h1>
+              <h2>We’d love to help</h2>
+              <p>Tell us a bit about your project or what you're looking to achieve. Whether you need a fresh website design, UI/UX overhaul, or marketing strategy, we’re here to help. Just give us a brief summary, and we'll be in touch to explore how we can bring your vision to life.</p>
+              <form id="contactForm" class="form-styles">
+                  <div class="input-group">
+                      <label for="first-name">First name</label>
+                      <input type="text" id="first-name" name="first-name" required>
+                  </div>
+                  <div class="input-group">
+                      <label for="last-name">Last name</label>
+                      <input type="text" id="last-name" name="last-name" required>
+                  </div>
+                  <div class="input-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="input-group">
+                      <label for="phone-number">Phone number</label>
+                      <input type="tel" id="phone-number" name="phone-number" required>
+                  </div>
+                  <div class="input-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="5" required></textarea>
+                  </div>
+                  <button type="submit">Send Message</button>
+              </form>
+          </div>
+          <div class="contact-image">
+              <img src="Assets/images/Deified-Logo-1.gif" alt="Logo">
+          </div>
       </div>
-    </section>
+  </section>
+  
+  <!-- Success/Error Modal -->
+  <div id="responseModal" class="modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <p id="modalMessage"></p>
+          <button id="modalCloseBtn">Close</button>
+      </div>
+  </div>
+  
+  <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const formData = new FormData(this);
+  
+          fetch('sendmail.php', {
+              method: 'POST',
+              body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+              let modalMessage = document.getElementById('modalMessage');
+              if (data.status === 'success') {
+                  modalMessage.textContent = "Thank you! Your message has been sent.";
+              } else {
+                  modalMessage.textContent = "Oops! Something went wrong, and we couldn't send your message.";
+              }
+              document.getElementById('responseModal').style.display = 'block';
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+      });
+  
+      // Modal close functionality
+      document.getElementsByClassName('close-btn')[0].onclick = function() {
+          document.getElementById('responseModal').style.display = 'none';
+      };
+  
+      document.getElementById('modalCloseBtn').onclick = function() {
+          document.getElementById('responseModal').style.display = 'none';
+      };
+  </script>
   
     <footer>
 

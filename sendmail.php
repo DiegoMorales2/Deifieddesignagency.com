@@ -25,11 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $emailContent, $headers)) {
-        // Redirect to a thank-you page or display a success message
-        echo "Thank you! Your message has been sent.";
+        echo json_encode(['status' => 'success']);
     } else {
-        // Display an error message if the email wasn't sent
-        echo "Oops! Something went wrong, and we couldn't send your message.";
+        echo json_encode(['status' => 'error']);
     }
 }
 ?>
